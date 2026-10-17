@@ -1,0 +1,8 @@
+/NoidDev.rbxlx
+/*.rbxlx.lock
+/*.rbxl.lock
+sourcemap.json
+Packages/
+DevPackages/
+ServerPackages/
+build/
