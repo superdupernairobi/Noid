@@ -1,0 +1,14 @@
+{
+    "name": "NoidDev",
+    "tree": {
+        "$className": "DataModel",
+        "ReplicatedStorage": {
+            "noid": { "$path": "src" }
+        },
+        "StarterPlayer": {
+            "StarterPlayerScripts": {
+                "NoidDev": { "$path": "dev" }
+            }
+        }
+    }
+}
