@@ -4,6 +4,6 @@ version = "0.1.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 license = "MIT"
-description = "blank for now"
+description = "Noid is a"
 authors = ["superdupernairobi"]
 exclude = ["build", "build/**", "docs", "docs/**", "assets", "assets/**", "dev", "dev/**", "moonwave.toml", "rokit.toml", "place.project.json"]
