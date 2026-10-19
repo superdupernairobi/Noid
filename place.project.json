@@ -3,7 +3,7 @@
     "tree": {
         "$className": "DataModel",
         "ReplicatedStorage": {
-            "noid": { "$path": "src" }
+            "Noid": { "$path": "src" }
         },
         "StarterPlayer": {
             "StarterPlayerScripts": {
