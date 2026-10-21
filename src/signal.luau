@@ -8,14 +8,14 @@ export type Connection = {
 export type Handler<T...> = (T...) -> ()
 
 export type Signal<T...> = {
-	Fire: (self: Signal<T...>, T...) -> (),
-	Connect: (self: Signal<T...>, Handler<T...>) -> Connection,
+	Fire: (self: Signal<T...>, ...any) -> (),
+	Connect: (self: Signal<T...>, handler: (...any) -> ()) -> Connection,
 	DisconnectAll: (self: Signal<T...>) -> (),
 	Count: (self: Signal<T...>) -> number,
 }
 
 type Node = {
-	handler: Handler<any>,
+	handler: (...any) -> (),
 	next: Node?,
 	connection: Connection,
 }
@@ -35,11 +35,11 @@ end
 
 local Signal = {}
 
-function Signal.new(): Signal<any>
+function Signal.new(): any
 	local head: Node? = nil
 
-	local signal: Signal<any> = {
-		Connect = function(self: any, handler: Handler<any>): Connection
+	local signal: any = {
+		Connect = function(self: any, handler: (...any) -> ()): Connection
 			local connection = new_connection()
 
 			head = {
