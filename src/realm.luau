@@ -20,6 +20,7 @@ const SERVER_SOURCES: { [types.ChangeSource]: boolean } = {
 
 local Realm = {}
 
+-- A change that is tagged client is rejected on a server machine so a client cannot add its own state.
 function Realm.may_set(realm: types.Realm, source: types.ChangeSource): boolean
 	if realm == "client" then
 		return CLIENT_SOURCES[source]
