@@ -40,6 +40,8 @@ const ALIASES: { [string]: types.State } = {
 	Physics = "Frozen",
 }
 
+type Alias = "Running" | "Freefall" | "Ragdoll" | "GettingUp" | "Physics"
+
 local by_name: { [string]: boolean } = {}
 for _, name in NAMES do
 	by_name[name] = true
@@ -49,7 +51,7 @@ table.freeze(by_name)
 
 local States = {}
 
-function States.resolve(name: string): types.State?
+function States.resolve(name: types.State | Alias): types.State?
 	if by_name[name] then
 		return name :: types.State
 	end
