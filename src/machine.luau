@@ -13,7 +13,9 @@ export type Machine = {
 
 local Machine = {}
 
--- The realm chooses which change sources this machine acceps, so a client machine takes sensor, driver and consumer. But a server machine takes: sensor, driver, and server, and rejects anything tagged client.
+--[=[
+The realm chooses which change sources this machine acceps, so a client machine takes sensor, driver and consumer. But a server machine takes: sensor, driver, and server, and rejects anything tagged client.
+]=]
 function Machine.new(initial: types.State, machine_realm: types.Realm): Machine
 	local current: types.State = initial
 	local own_realm: types.Realm = machine_realm
@@ -24,7 +26,9 @@ function Machine.new(initial: types.State, machine_realm: types.Realm): Machine
 			return current :: types.State
 		end,
 
-		-- Returns false and fires nothing when the transition is not in the rules table or the realm rejects the request source.
+		--[=[
+		Returns false and fires nothing when the transition is not in the rules table or the realm rejects the request source.
+		]=]
 		Change = function(_self: Machine, request: types.ChangeRequest): boolean
 			const target = request.state
 

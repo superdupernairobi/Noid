@@ -12,7 +12,9 @@ export type Conditions = {
 
 local Conditions = {}
 
--- Every param is optional and nil means not known, not false, so a field you leave out just goes through to the next check, priority order is: Dead, Seated, Swimming, Climbing, Grounded, Airborne
+--[=[
+Every param is optional and nil means not known, not false, so a field you leave out just goes through to the next check, priority order is: Dead, Seated, Swimming, Climbing, Grounded, Airborne
+]=]
 function Conditions.resolve(conditions: Conditions): types.State?
 	if conditions.dead then
 		return "Dead"

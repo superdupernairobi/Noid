@@ -48,7 +48,9 @@ table.freeze(allowed)
 
 local Transitions = {}
 
--- A state can never transition to itself, so the rules table is checked before the exact pair. Anything can reach Dead or Frozen.
+--[=[
+A state can never transition to itself, so the rules table is checked before the exact pair. Anything can reach Dead or Frozen.
+]=]
 function Transitions.can(from: types.State, to: types.State): boolean
 	if from == to then
 		return false
