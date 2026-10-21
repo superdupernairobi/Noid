@@ -1,0 +1,12 @@
+[site]
+siteTitle = "Noid"
+logo = "/logo.png"
+favicon = "/favicon.png"
+
+[docs]
+url = "https://superdupernairobi.github.io/Noid/"
+changelog = true
+includeReadme = true
+
+[api]
+reportUndocumented = true
