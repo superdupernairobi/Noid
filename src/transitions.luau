@@ -8,6 +8,14 @@ const RULES: { types.Transition } = {
 	{ from = "Dead", to = "Idle" },
 	{ from = "Frozen", to = "Idle" },
 
+	{ from = "Idle", to = "Airborne" },
+	{ from = "Idle", to = "Jumping" },
+	{ from = "Idle", to = "Climbing" },
+	{ from = "Idle", to = "Swimming" },
+	{ from = "Idle", to = "Seated" },
+	{ from = "Idle", to = "Flying" },
+	{ from = "Idle", to = "Falling" },
+
 	{ from = "Idle", to = "Grounded" },
 	{ from = "Grounded", to = "Idle" },
 	{ from = "Grounded", to = "Airborne" },
@@ -20,7 +28,9 @@ const RULES: { types.Transition } = {
 
 	{ from = "Jumping", to = "Airborne" },
 	{ from = "Jumping", to = "Landed" },
+	{ from = "Jumping", to = "Grounded" },
 	{ from = "Airborne", to = "Landed" },
+	{ from = "Airborne", to = "Grounded" },
 	{ from = "Airborne", to = "Falling" },
 	{ from = "Airborne", to = "Climbing" },
 	{ from = "Airborne", to = "Swimming" },

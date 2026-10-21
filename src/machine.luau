@@ -3,6 +3,7 @@
 const types = require("./types")
 const signal = require("./signal")
 const realm = require("./realm")
+const transitions = require("./transitions")
 
 export type Machine = {
 	State: (self: any) -> types.State,
@@ -33,6 +34,10 @@ function Machine.new(initial: types.State, machine_realm: types.Realm): Machine
 			const target = request.state
 
 			if not realm.may_set(own_realm, request.source) then
+				return false
+			end
+			
+			if not transitions.can(current, target :: types.State) then
 				return false
 			end
 
