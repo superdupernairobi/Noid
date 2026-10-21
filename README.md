@@ -4,7 +4,7 @@ Humanoid styled state machine for custom Roblox character controllers.
 
 It does not move anything and does not cast anything. Physics, raycasting and replication stay with you.
 
-![Noid driving a raycast character](assets/noid-example.gif)
+![Noid example](assets/noid-example.gif)
 
 ## Install
 

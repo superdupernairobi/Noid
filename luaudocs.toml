@@ -10,3 +10,7 @@ includeReadme = true
 
 [api]
 reportUndocumented = true
+
+[repo]
+url = "https://github.com/superdupernairobi/Noid"
+branch = "main"
