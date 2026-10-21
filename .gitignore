@@ -7,3 +7,4 @@ DevPackages/
 ServerPackages/
 build/
 globalTypes.d.luau
+*.rbxm

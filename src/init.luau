@@ -1,14 +1,12 @@
 --!strict
 
 --[=[
-@class Noid
-
 A state machine like the Humanoid's, for custom character controllers.
 
-It moves literally nothing, doesn't cast anything, talk to the network, etc. It decides what state a character is in and tells you when it changes. Physics, raycasting and replication stay with you.
+Noid does not move anything or cast anything, it decides what state a character is in and tells you when that changes. Physics, raycast and replication stay with you.
 
 ```lua
-local Noid = require(path.to.Noid)
+local Noid = require(game:GetService("ReplicatedStorage").Packages.Noid)
 
 local machine = Noid.Machine.new("Idle", "client")
 local desired = Noid.Conditions.resolve({ grounded = true })
