@@ -30,7 +30,7 @@ jobs:
           echo "$HOME/.rokit/bin" >> "$GITHUB_PATH"
 
       - name: Install tools
-        run: rokit install -- force
+        run: rokit install --no-trust-check
 
       - name: Download Roblox definitions
         run: curl -fsSL -o globalTypes.d.luau https://raw.githubusercontent.com/JohnnyMorganz/luau-lsp/main/scripts/globalTypes.d.luau
