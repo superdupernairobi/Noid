@@ -36,7 +36,7 @@ function Machine.new(initial: types.State, machine_realm: types.Realm): Machine
 			if not realm.may_set(own_realm, request.source) then
 				return false
 			end
-			
+
 			if not transitions.can(current, target :: types.State) then
 				return false
 			end

@@ -36,6 +36,8 @@ export type Connection = signal.Connection
 export type Conditions = conditions.Conditions
 export type Machine = machine.Machine
 export type Lifecycle = lifecycle.Lifecycle
+export type Transition = types.Transition
+export type Disconnectable = types.Disconnectable
 
 const Noid = {
 	Conditions = conditions,
